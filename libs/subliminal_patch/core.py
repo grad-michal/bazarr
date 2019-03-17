@@ -634,7 +634,7 @@ def search_external_subtitles(path, languages=None, only_one=False):
         if os.path.isdir(os.path.dirname(abspath)):
             try:
                 subtitles.update(_search_external_subtitles(abspath, languages=languages,
-                                                            only_one=only_one))
+                                                            only_one=only_one, scandir_generic=True))
             except OSError:
                 subtitles.update(_search_external_subtitles(abspath, languages=languages,
                                                             only_one=only_one, scandir_generic=True))
